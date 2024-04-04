@@ -118,12 +118,29 @@ span {
     letter-spacing: 0.02em;
     color: #2e2f42;
     padding: 24px 0px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
     color: #404bbf;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
+
+.current {
+    position: relative;
+    color: #404bbf;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background: #404bbf;
+    height: 4px;
+    width: 100%;
 }
 
 .address {
@@ -145,13 +162,13 @@ span {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-
+    transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
 .address-link:focus {
     color: #404bbf;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 /* *------------ MAIN --------------* */
@@ -161,6 +178,13 @@ span {
 .solutions {
     background-color: #2e2f42;
     padding: 188px 0;
+    background: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 1440px;
 }
 
 .solutions-wrap {
@@ -232,6 +256,7 @@ span {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-top: 8px;
     margin-bottom: 8px;
 }
 
@@ -241,8 +266,28 @@ span {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    /* max-width: 264px; */
 }
+
+.advantages-icon-items {
+    display: flex;
+    gap: 24px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.advantages-icon-link {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages-icon {}
 
 /* ? ----------- Team -----------  */
 
@@ -252,8 +297,6 @@ span {
     padding-bottom: 120px;
 }
 
-.team-container {}
-
 .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -262,17 +305,12 @@ span {
     text-transform: capitalize;
     text-align: center;
     color: #2e2f42;
-    /* margin: 0 auto; */
     margin-bottom: 72px;
 }
 
 .team-menu {
     gap: 24px;
     display: flex;
-    /* justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 32px 0;
-    padding-bottom: 32px; */
 
 }
 
@@ -280,20 +318,14 @@ span {
     background-color: #FFFFFF;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
-    /* padding: 32px 0; */
-    /* padding: 32px 0; */
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-img {
-    /* max-width: 100%; */
-    /* object-fit: cover; */
-}
+.team-img {}
 
 .team-name-text {
     padding: 32px 0;
-
 }
 
 .team-name {
@@ -301,10 +333,7 @@ span {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    /* text-align: center; */
     color: #2e2f42;
-    /* margin-bottom: 8px; */
-    /* text-align: center; */
     text-align: center;
     margin-bottom: 8px;
 }
@@ -314,9 +343,37 @@ span {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    /* text-align: center; */
     color: #434455;
     text-align: center;
+}
+
+.team-icon-menu {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+}
+
+.team-icon-item {
+    align-items: center;
+    justify-content: center;
+}
+
+.team-icon-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-icon {
+    fill: #F4F4FD;
+}
+
+.team-icon-link:hover {
+    background-color: #404BBF;
 }
 
 /* ? ------------ Partfolio ------------ */
@@ -352,6 +409,13 @@ span {
     width: calc((100% - 48px) / 3);
     border-top: none;
     margin-bottom: 8px;
+}
+
+.partfolio-items:hover,
+.partfolio-items:focus {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+    cursor: pointer;
 }
 
 .partfolio-img {
@@ -390,6 +454,8 @@ span {
     padding-bottom: 100px;
 }
 
+.footer-container {}
+
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -418,4 +484,32 @@ span {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+}
+
+.footer-icons-text {
+    color: #ffffff;
+    padding-bottom: 16px;
+}
+
+.footer-icons-menu {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-icons-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons {
+    fill: #F4F4FD;
+}
+
+.footer-icons-link:hover {
+    background-color: #31D0AA;
 }
