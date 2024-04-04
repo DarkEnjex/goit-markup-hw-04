@@ -541,7 +541,9 @@ span {
     max-width: 264px;
 }
 
-.foot-icons-cont {}
+.foot-icons-cont {
+    margin-right: 120px;
+}
 
 .footer-icons-text {
     color: #ffffff;
