@@ -109,16 +109,11 @@ span {
     display: flex;
     gap: 40px;
     position: relative;
-    color: #404BBF;
+    color: #404bbf;
 }
 
 .navigation-item {
     padding: 24px 0;
-}
-
-.current {
-    position: relative;
-    color: #404bbf;
 }
 
 .current::after {
@@ -144,10 +139,16 @@ span {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .navigation-link:hover,
 .navigation-link:focus {
     color: #404bbf;
     /* text-decoration: underline; */
+}
+
+.current {
+    position: relative;
+    color: #404bbf;
 }
 
 .address {
