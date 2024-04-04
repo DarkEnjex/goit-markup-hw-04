@@ -367,7 +367,7 @@ span {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    padding-bottom: 32px;
+    /* padding-bottom: 32px; */
 }
 
 .team-icon-item {
@@ -388,7 +388,7 @@ span {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon {
+.team-icon-icons {
     fill: #F4F4FD;
 }
 
