@@ -502,7 +502,14 @@ span {
     padding-bottom: 100px;
 }
 
-.footer-container {}
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.foot-logo-cont {
+    margin-right: 120px;
+}
 
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -534,9 +541,16 @@ span {
     max-width: 264px;
 }
 
+.foot-icons-cont {}
+
 .footer-icons-text {
     color: #ffffff;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
 }
 
 .footer-icons-menu {
@@ -544,9 +558,14 @@ span {
     gap: 16px;
 }
 
-.footer-icons-link {
+.footer-icons-items {
     width: 40px;
     height: 40px;
+}
+
+.footer-icons-link {
+    height: 100%;
+    width: 100%;
     background-color: #4D5AE5;
     border-radius: 50%;
     display: flex;
@@ -561,6 +580,7 @@ span {
     fill: #F4F4FD;
 }
 
-.footer-icons-link:hover {
+.footer-icons-link:hover,
+.footer-icons-link:focus {
     background-color: #31D0AA;
 }
